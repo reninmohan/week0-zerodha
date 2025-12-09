@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.5%;
+  padding: 1.5rem 1rem;
+  box-shadow: rgba(208, 203, 203, 0.24) 0px 3px 3px;
+}
+
+.img-container {
+  width: min(32%, 130px);
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  background: #000;
+  width: 25px;
+  height: 2.5px;
+}
