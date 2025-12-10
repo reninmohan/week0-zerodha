@@ -16,8 +16,12 @@
   <script defer src="./script.js"></script>
   <body>
     <nav>
-      <div class="img-container">
-        <img src="./assets/images/logo.svg" alt="zerodha-logo" class="logo" />
+      <div class="logo-container">
+        <img
+          src="./assets/images/logo.svg"
+          alt="zerodha-logo"
+          class="zerodha-logo"
+        />
       </div>
       <ul class="nav-items">
         <!-- <li>Signup</li>
@@ -26,7 +30,7 @@
         <li>Pricing</li>
         <li>Support</li> -->
         <li>
-          <button class="hamburger" id="menuBtn">
+          <button class="hamburger-btn" id="menu-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -34,6 +38,22 @@
         </li>
       </ul>
     </nav>
-    <div class="modal">dd</div>
+
+    <!-- Modal  -->
+    <div class="mobile-modal" id="mobile-modal-menu">
+      <button class="hamburger-btn" id="modal-close-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="basicServices">
+        <li>Signup</li>
+        <li>Products</li>
+        <li>Support</li>
+        <li>About</li>
+        <li>Pricing</li>
+      </ul>
+      <div class="platformServices"></div>
+    </div>
   </body>
 </html>

@@ -6,28 +6,39 @@
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 6.5%;
-  padding: 1.5rem 1rem;
-  box-shadow: rgba(208, 203, 203, 0.24) 0px 3px 3px;
+body {
+  position: relative;
 }
 
-.img-container {
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  height: 6%;
+  padding: 1.5rem 1rem;
+  box-shadow: rgba(227, 222, 222, 0.24) 0px 3px 5px;
+}
+
+.logo-container {
   width: min(32%, 130px);
 }
 
-.logo {
+.zerodha-logo {
   max-width: 100%;
+}
+
+li {
+  list-style: none;
 }
 
 .nav-items {
   display: flex;
-  list-style: none;
 }
-.hamburger {
+
+.hamburger-btn {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -36,7 +47,7 @@ nav {
   cursor: pointer;
 }
 
-.hamburger span {
+.hamburger-btn span {
   display: block;
   background: #000;
   width: 25px;
@@ -45,20 +56,35 @@ nav {
   transition: 0.3s;
 }
 
-.hamburger.active span:nth-child(1) {
+.hamburger-btn.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger.active span:nth-child(2) {
+.hamburger-btn.active span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.hamburger-btn.active span:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-.modal {
-  background-color: violet;
+.mobile-modal {
+  position: fixed;
+  top: 7px;
   width: 98%;
-  height: 50%;
+  right: 1%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.4s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.mobile-modal.open {
+  opacity: 1;
+  visibility: visible;
 }
