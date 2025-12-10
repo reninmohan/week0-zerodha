@@ -7,7 +7,10 @@
 }
 
 body {
-  position: relative;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 nav {
@@ -22,20 +25,29 @@ nav {
   box-shadow: rgba(227, 222, 222, 0.24) 0px 3px 5px;
 }
 
-.logo-container {
-  width: min(32%, 130px);
-}
+/* .logo-container {
+  width: clamp(30px, 20vw, 150px);
+} */
 
 .zerodha-logo {
-  max-width: 100%;
+  width: clamp(20px, 25vw, 150px);
 }
 
 li {
   list-style: none;
+  font-weight: 300;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
-
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+}
 .nav-items {
   display: flex;
+  gap: 3vw;
 }
 
 .hamburger-btn {
@@ -70,21 +82,80 @@ li {
 
 .mobile-modal {
   position: fixed;
-  top: 7px;
-  width: 98%;
+  top: clamp(1px, 3vw, 60px);
+  width: min(98%, 600px);
   right: 1%;
-  z-index: 999;
+  z-index: 10;
   opacity: 0;
   visibility: hidden;
 
   transition: 0.4s ease;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: white;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 2px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: clamp(1px, 3vw, 15px);
+  /* right: max(1vw, 8px); */
+  right: 10px;
 }
 
 .mobile-modal.open {
   opacity: 1;
   visibility: visible;
+}
+
+.basic-services {
+  margin-top: 1%;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 1.2rem;
+}
+
+.basic-services li {
+  display: grid;
+  grid-template-columns: 15% 80%;
+  column-gap: 0.5rem;
+  align-items: center;
+  justify-items: start;
+}
+.basic-services li img {
+  width: 100%;
+  object-fit: contain;
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  background-color: #ccc;
+}
+
+.other-services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1.2rem;
+  row-gap: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav-hidden {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-close-btn {
+    border: 1px solid red;
+    visibility: hidden;
+    display: none;
+  }
 }

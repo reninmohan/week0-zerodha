@@ -10,9 +10,11 @@ const mobileMenu = document.getElementById("mobile-modal-menu");
 menuToggleBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
   modalCloseBtn.classList.add("active");
+  menuToggleBtn.classList.toggle("active");
 });
 
 modalCloseBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
   modalCloseBtn.classList.remove("active");
+  menuToggleBtn.classList.remove("active");
 });
