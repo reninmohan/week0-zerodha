@@ -12,8 +12,12 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+.nav-alignment {
+  box-shadow: rgba(227, 222, 222, 0.24) 0px 3px 5px;
+}
 nav {
+  margin: 0 auto;
+  max-width: 1200px;
   display: flex;
   position: sticky;
   top: 0;
@@ -22,7 +26,6 @@ nav {
   align-items: center;
   height: 6%;
   padding: 1.5rem 1rem;
-  box-shadow: rgba(227, 222, 222, 0.24) 0px 3px 5px;
 }
 
 /* .logo-container {
@@ -82,8 +85,9 @@ a:visited {
 
 .mobile-modal {
   position: fixed;
-  top: clamp(1px, 3vw, 60px);
-  width: min(98%, 600px);
+  /* top: clamp(1px, 3vw, 60px); */
+  top: 3vw;
+  width: 98%;
   right: 1%;
   z-index: 10;
   opacity: 0;
@@ -392,11 +396,21 @@ footer li {
     flex-direction: row;
     column-gap: 1em;
   }
-}
-
-@media (min-width: 1200px) {
+  .mobile-modal {
+    width: 30%;
+    right: 1%;
+    top: 9%;
+  }
   .modal-close-btn {
     visibility: hidden;
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobile-modal {
+    width: 30%;
+    right: 21%;
+    top: 7%;
   }
 }
